@@ -5,11 +5,11 @@ metadata:
   namespace: default
 spec:
   tag: stwomack/orderprocessing-service
-  serviceAccountName: tutorial-service-account
+  serviceAccountName: main-builder-service-account
   builder:
-    name: my-builder
+    name: main-builder
     kind: Builder
   source:
     git:
-      url: https://github.com/stwomack/orderprocessing-service
-      revision: womack
+      url: https://github.com/stwomack/orderprocessingservice
+      revision: main
