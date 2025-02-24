@@ -23,7 +23,6 @@ public class OrderprocessingserviceApplication {
 
 	@RestController
 	class Orderprocessingserviceontroller {
-
 		private final Logger LOG = LoggerFactory.getLogger(Orderprocessingserviceontroller.class);
 
 		@PostMapping("/processPayment")
@@ -31,7 +30,7 @@ public class OrderprocessingserviceApplication {
 			if (shouldSucceed()) {
 				return "Payment Successful";
 			} else {
-				throw new Exception("Customer too broke");
+				throw new Exception("Customer is too broke");
 			}
 		}
 
@@ -69,10 +68,7 @@ public class OrderprocessingserviceApplication {
 	}
 
 	private boolean shouldSucceed() {
-		// Generate a random number between 0 and 99
 		int randomNumber = random.nextInt(100);
-
-		// 80% chance of success (0-79)
 		return randomNumber < 80;
 	}
 }

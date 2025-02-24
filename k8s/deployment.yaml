@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orderprocessing-service
+spec:
+  replicas: 20
+  selector:
+    matchLabels:
+      app: orderprocessing-service
+  template:
+    metadata:
+      labels:
+        app: orderprocessing-service
+    spec:
+      containers:
+        - name: orderprocessing-service
+          image: stwomack/orderprocessing-service:latest
+          ports:
+            - containerPort: 8080

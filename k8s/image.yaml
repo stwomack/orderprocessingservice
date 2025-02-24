@@ -1,0 +1,15 @@
+apiVersion: kpack.io/v1alpha2
+kind: Image
+metadata:
+  name: orderprocessing-service-image
+  namespace: default
+spec:
+  tag: stwomack/orderprocessing-service
+  serviceAccountName: tutorial-service-account
+  builder:
+    name: my-builder
+    kind: Builder
+  source:
+    git:
+      url: https://github.com/stwomack/orderprocessing-service
+      revision: womack
