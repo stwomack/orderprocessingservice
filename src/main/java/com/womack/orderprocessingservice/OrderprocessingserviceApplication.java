@@ -27,6 +27,7 @@ public class OrderprocessingserviceApplication {
 
 		@PostMapping("/processPayment")
 		public String processPayment(@RequestBody Payment payment) throws Exception {
+			LOG.info("Processing Payment");
 			if (shouldSucceed()) {
 				return "Payment Successful";
 			} else {
@@ -36,6 +37,7 @@ public class OrderprocessingserviceApplication {
 
 		@PostMapping("/checkInventory")
 		public String checkInventory(@RequestBody List<OrderItem> orderItems) throws Exception {
+			LOG.info("Checking Inventory");
 			if (shouldSucceed()) {
 				return "Inventory Check Passed";
 			} else {
@@ -45,6 +47,7 @@ public class OrderprocessingserviceApplication {
 
 		@PostMapping("/shipPackage")
 		public String shipPackage(@RequestBody List<OrderPackage> orderPackages) throws Exception {
+			LOG.info("Shipping Package");
 			if (shouldSucceed()) {
 				return "Package Shipped Successfully";
 			} else {
@@ -54,6 +57,7 @@ public class OrderprocessingserviceApplication {
 
 		@PostMapping("/notifyCustomer")
 		public String notifyCustomer(@RequestBody Customer customer) throws Exception {
+			LOG.info("Notifying Customer");
 			if (shouldSucceed()) {
 				return "Customer Successfully Notified";
 			} else {
