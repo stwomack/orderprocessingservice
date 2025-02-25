@@ -49,6 +49,4 @@ public class SubmittedOrder {
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
-
-
 }
