@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Submit Order</title>
+    <style>
+        .button-container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .big-red-button {
+            width: 200px;
+            height: 200px;
+            background-image: url('https://t3.ftcdn.net/jpg/04/73/38/24/360_F_473382434_4Ox38f5pWoiQE5XofRlozMbnsW5dTcjg.jpg'); /* Replace with the actual URL of the image */
+            background-size: cover;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;">Submit Order</h1>
+<div class="button-container">
+    <form action="/submitOrder" method="post">
+        <button type="submit" class="big-red-button"></button>
+    </form>
+</div>
+</body>
+</html>
