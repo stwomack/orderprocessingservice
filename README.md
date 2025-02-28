@@ -3,3 +3,4 @@
 * If running both services on localhost, start this app as follow and hit http://localhost:8008 in a browser:
     * ```./mvnw spring-boot:run -Dspring-boot.run.jvmArguments='-Dserver.port=8080 -Dordersworkflow-url=http://localhost:8081/'```
 * New workflow instances are kicked off via the web page of this service app now
+* If you change either of these projects, and want to run them in kubernetes, you'll need to change the respective deployments to point to your container repo instead of mine
