@@ -19,7 +19,11 @@ public class OrderSubmissionController {
     @PostMapping("/submitOrder")
     public String submitOrder() {
         LOG.error("URL: {}", serviceUrl);
-        restTemplate.postForEntity(serviceUrl + "submitOrder", null, String.class);
+        try {
+            restTemplate.postForEntity(serviceUrl + "submitOrder", null, String.class);
+        } catch (Exception e) {
+            //DO Nothing
+        }
         return "redirect:/";
     }
 }
