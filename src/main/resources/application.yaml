@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: orderprocessingservice
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+ordersworkflow-url: http://ordersworkflow-service/
