@@ -22,7 +22,7 @@ public class OrderSubmissionController {
         try {
             restTemplate.postForEntity(serviceUrl + "submitOrder", null, String.class);
         } catch (Exception e) {
-            //DO Nothing
+            LOG.error(e.getMessage());
         }
         return "redirect:/";
     }
