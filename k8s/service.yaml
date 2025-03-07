@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: orderprocessing-service
 spec:
-  type: LoadBalancer
+#  type: LoadBalancer
   selector:
     app: orderprocessingservice
   ports:
