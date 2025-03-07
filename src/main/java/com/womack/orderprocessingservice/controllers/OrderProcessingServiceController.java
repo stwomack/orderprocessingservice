@@ -57,6 +57,6 @@ public class OrderProcessingServiceController {
 
     private boolean shouldSucceed() {
         int randomNumber = random.nextInt(100);
-        return randomNumber < 80;
+        return randomNumber < 50;
     }
 }
